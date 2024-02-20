@@ -1,0 +1,10 @@
+.length method is used to get the length of a string or array
+
+Changing the case of string:
+The case of a string is changed from lowercase to uppercase using the .toUpperCase() method 
+Also, the case of a string is changed from uppercaseto lowercase using the .toLowerCase() method
+
+CHECKING FOR SUBSTRING
+
+The index of a substring can be checked by using the .indexOf('the substring')  . This returns the index of the first letter starting the particular substring. 
+
