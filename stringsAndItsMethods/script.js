@@ -71,3 +71,49 @@ const ending = man.endsWith('t');
 console.log(check);
 console.log(starting);
 console.log(ending);
+
+// getting a substring using the following string methods:
+
+// .slice()
+
+
+const exampleString = "Hotdog";
+console.log(exampleString.slice());
+console.log(exampleString.slice(0, 3));
+console.log(exampleString.slice());
+
+// .split()
+
+const sentence1 = "The quick brown fox jumped over the lazy dog";
+
+console.log(sentence1.split(' '));
+
+// .reverse() , .join() and .repeat()
+
+// .reverse()
+
+const name4 = "Nafisat and Zainab";
+const split1 = name4.split(' ');
+console.log(split1); 
+
+const revers = split1.reverse()
+console.log(revers);
+
+// .join()
+
+
+const join1 = revers.join('-');
+
+console.log(join1);
+
+// .repeat() 
+const dogSays = "woof "
+console.log(dogSays.repeat(2));
+
+// .trim()
+
+const trim1 = " @example.com "
+console.log(trim1.trim())
+
+
+
