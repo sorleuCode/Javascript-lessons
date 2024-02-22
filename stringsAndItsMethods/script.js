@@ -51,7 +51,7 @@ const word = "SHE IS A GIRL";
 
 console.log(words.toUpperCase());
 
-console.log(word.toLocaleLowerCase());
+console.log(word.toLowerCase());
 
 //Checking for Substring
 
