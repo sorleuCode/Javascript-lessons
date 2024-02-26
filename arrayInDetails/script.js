@@ -256,5 +256,163 @@ console.log(newMultiple);
 // console.log(typeof arr);
 
 
+// ARRAY FILTER
 
+// .filter() method: it is used to filter the elements of the array
+
+const numberS = [-10, 0, -2, 4, -9, 6, -8];
+const filteredNumbers = numberS.filter((number) => {
+    return number < 0;
+})
+
+console.log(filteredNumbers);
+
+
+// Using for loop to filter
+
+let filtered = [];
+for (let i = 0; i < numberS.length; i++) {
+    if (numberS[i] < 0) {
+        filtered.push(numberS[i]);
+    }
+}
+console.log(filtered);
+
+
+// other examples
+const employees = [
+    {name: "Mohammed", overtime: 10},
+    {name: "Aishat", overtime: 5},
+    {name: "Bolaji", overtime: 4},
+    {name: "Chris", overtime: 7},
+    {name: "Ben", overtime: 9},
+    {name: "Munirat", overtime: 12},
+]
+
+const employeesToReward = employees.filter((employee) => {
+    if (employee.overtime >= 7){
+        return employee.overtime;
+    }
+})
+console.log(employeesToReward);
+
+// class-work1
+
+const employeeToRewardNames = employeesToReward.map((employee) => {
+        return employee.name;
+    
+})
+console.log(employeeToRewardNames);
+
+// classwork2
+employeeToRewardNames.forEach((name) => {
+    console.log(`${name}, you have recieved an award`);
+})
+
+
+// loop style
+
+for (let i = 0; i < employeeToRewardNames.length; i++) {
+    console.log(`${employeeToRewardNames[i]}, you have recieved an award`);
+}
+
+const creatures = [
+    {animal: "Shark", habitat: "Ocean"},
+    {animal: "Whale", habitat: "Ocean"},
+    {animal: "Hippopotamus", habitat: "Lake"},
+    {animal: "Lion", habitat: "Savanna"},
+    {animal: "Monkey", habitat: "Jungle"}
+
+]
+
+// const aquaticAnimals = creatures.filter((creature) => {
+//     return creature.habitat === "Ocean" || creature.habitat === "Lake";
+// })
+
+// console.log(aquaticAnimals);
+
+
+const aquaticAnimals = creatures.filter((creature) => {
+    if (creature.habitat === "Ocean"){
+        return creature;
+    }
+    else if (creature.habitat === "Lake") {
+        return creature;
+    }
+    else {
+        return false;
+    }
+})
+
+console.log(aquaticAnimals);
+
+
+// ARRAY FIND
+
+// .find() method: this finds  particular element(s) in an array and returns it. It only returns the first element it founds to be true
+
+const digits = [1, 2, 3, 4, 5, 6, 7, 8, 9,];
+const value = digits.find((digit) => {
+    return digit < 4;
+})
+console.log(value);
+
+
+const  states = [
+    "Ogun State",
+    "Kogi State",
+    "Anambra State",
+    "Lagos State",
+    "Benue State",
+]
+
+const state = states.find((state) => {
+    return state.includes("L");
+})
+console.log(state);
+
+
+
+// CLASS WORK
+
+// A student Assessment took place, with a total mark of 10, Give us 7 students and mark them over 10, now give a reward to each students with a score over the mark of 6.
+
+const studentS = [
+    {name: "Soliu", score: 4},
+    {name: "Hayzed", score: 7},
+    {name: "Kenny", score: 3},
+    {name: "Eef", score: 8},
+    {name: "Abdullahi", score: 2},
+    {name: "Zainab", score: 5},
+    {name: "Tunmise", score: 9},
+]
+
+const studentAboveFromSix = studentS.filter((student) => {
+    if (student.score > 6 && student.score <= 10){
+        return student;
+    }
+})
+
+const rewardStudents = studentAboveFromSix.map((student) => {
+    return student.name;
+})
+
+rewardStudents.forEach((name) => {
+    console.log(`Hi ${name}, here is your reward for scoring above 6`)
+})
+
+
+
+// another ways without using the .map() method
+// const studentAboveFromSix = studentS.filter((student) => {
+//     if (student.score > 6 && student.score <= 10) {
+//         return student.score;
+//     }
+    
+// })
+
+
+// studentAboveFromSix.forEach((student) => {
+//     console.log(`Hi ${student.name}, here is your reward for scoring above 6`)
+// })
 
