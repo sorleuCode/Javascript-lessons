@@ -114,3 +114,56 @@ const operatingSystem = {
 
 const operatingSystemInfo = Object.entries(operatingSystem);
 console.log(operatingSystemInfo);
+
+const user = {
+    username: "Jhon",
+    password: 12345
+}
+
+// object.freez() //this prevents modification of existing properties, prevents adding another property or removing a property
+const userInfo = Object.freeze(user);
+console.log(userInfo)
+user.username = "Soliu"
+console.log(userInfo)
+console.log(user.username); // the property didnt change!
+
+
+const userOne = {
+    userName: "John",
+    password: 12345
+}
+
+// object.seal() // prevents new properties from being added or removed
+
+const userInfo1 = Object.seal(userOne);
+userInfo1.userAge = 32;
+console.log(userInfo1) // userAge is not added
+
+// DELETING AND UPDATING OBJECT PROPERTIES
+
+let x;
+const perSon = {
+    name: "Soliu",
+    age: 35,
+    isAdmin: true,
+    address: {
+        street: "23, Onigbin street",
+        city: "Ota",
+        state: "Ogun",
+    },
+    
+    hobbies: ["Music", "Sport"]
+
+}
+
+// accessing an array inside an object
+x = perSon.hobbies[0];
+let y = perSon["hobbies"][1];
+console.log(x, y);
+
+// updating a property
+perSon.name = "Bode"
+console.log(perSon);
+
+perSon.address.street = "22, Tanke Oke-odo";
+console.log(perSon);

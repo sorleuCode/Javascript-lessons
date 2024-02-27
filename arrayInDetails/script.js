@@ -435,3 +435,5 @@ const answer = boxes.reduce((accumulator, value) => {
     return accumulator + value;
 }, 0);
 console.log(answer);
+
+
