@@ -15,6 +15,7 @@ const person = {
 }
 
 console.log(person);
+console.log(person.children.SecondChild);
 
 // How to access properties in a data and how to add properties to data
 
@@ -47,6 +48,69 @@ const dog = {
     name: "fluffy",
     age: 2,
     listAllProperties: function() {
-        console.log()
+        console.log(this.name, this.age)
     }
 }
+dog.listAllProperties();
+
+// continuation on Objects: Built-in methods
+
+const myObject = {
+    myMethod1: () => {}, // arrow function
+    myMethod2: function() {}, //function declaration
+    myMethod3() {} // function expression
+}
+
+// examples: BUILT-IN METHOD WITH ARROW FUNCTION
+
+const animal = {
+    name: "fluffy orange",
+    age: 10,
+    bark: () => {
+        console.log("woof woof!")
+    }
+}
+console.log(animal.name)
+animal.bark();
+
+
+// OBJECT METHODS
+//object.keys()
+//object.value()
+//object.entries()
+//object.frezeez()
+//object.seal()
+
+const employees = {
+    receptionist: "Soliu",
+    secretary: "Kenny",
+    sales: "Abdullahi",
+    accountant: "Bode",
+    cleaner: "Hayzed"
+}
+
+// object.keys() //this creates and returns an array containing the keys of an object
+const employeeInfo = Object.keys(employees);
+console.log(employeeInfo);
+
+const session = {
+    id: 1,
+    date: "27-feb-2024",
+    device: "Mobile",
+    browser: "Chrome"
+}
+
+// object.value() // this creates and returns an array containing the values of an object
+const sessionValues = Object.values(session);
+console.log(sessionValues);
+
+const operatingSystem = {
+    name: "Linux",
+    version: 18.04,
+    license: "Open source"
+}
+
+// object.entries() // this creates a nested array of the key and value pairs of an object
+
+const operatingSystemInfo = Object.entries(operatingSystem);
+console.log(operatingSystemInfo);
