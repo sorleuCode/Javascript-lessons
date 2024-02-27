@@ -72,6 +72,7 @@ const animal = {
 }
 console.log(animal.name)
 animal.bark();
+console.log(animal);
 
 
 // OBJECT METHODS
@@ -167,3 +168,72 @@ console.log(perSon);
 
 perSon.address.street = "22, Tanke Oke-odo";
 console.log(perSon);
+
+// Deleting a property
+
+delete perSon.address.state
+console.log(perSon); // street wont show again
+
+console.log(perSon);
+
+delete perSon.address.city
+
+// Adding a function (method) a as property to an object
+perSon.greet = function() {
+    console.log(`Hello, my name is ${this.name}`);
+}
+
+perSon.greet();
+
+console.log(perSon); // to see that function/method has been added to our object "perSon"
+
+// copying numbers 
+let x1 = 1;
+let y1 = x1;
+
+x1 = 2;
+console.log(y1, x1);
+
+
+// copying strings
+
+let firstPerson = "Mark";
+let secondPerson = firstPerson;
+
+firstPerson = "Austin";
+console.log(firstPerson);
+console.log(secondPerson);
+
+// COPYING COMPLEX VALUE
+// copying arrays
+
+const aniMals = ["dogs", "cats"];
+const otherAnimals = aniMals;
+aniMals.push("Goat");
+console.log(aniMals);
+console.log(otherAnimals);
+
+// copying objects
+
+const data = {
+    firstnaMe: "Zainab",
+    lastName: "Abdullahi"
+}
+
+const otherData = data;
+console.log(data);
+console.log(otherData);
+console.log(data === otherData); // returns a boolean value '// true
+
+
+// EQUALITY 
+const peron1 = {
+    firstName: "Soliu"
+}
+
+const otherperson1 = {
+    firstName: "Soliu"
+}
+
+console.log(peron1 === otherperson1); // false
+
