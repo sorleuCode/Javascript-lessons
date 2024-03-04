@@ -184,3 +184,85 @@ const RectShape = class myShape {
 const newRect = new RectShape (8, 9);
 console.log(newRect.shapeArea);
 
+// Difference btw const and class
+
+// const detailOne = {
+//     name : "Class Captain",
+//     age: 540,
+//     isBlack: false
+// }
+
+// const detailTwo = {
+//     name : "Baba Oloye",
+//     age: 640,
+//     isBlack: true
+// }
+// const getDetailOne = new detailOne()
+// console.log(getDetailOne)
+
+class Detail {
+    constructor(name, age, isPretty) {
+        this.name = name;
+        this.age = age;
+        this.Pretty = isPretty
+    }
+}
+
+const detailOne = new Detail("Bash", 12, false);
+const detailTwo = new Detail("Nafi", 10, false);
+const detailThree = new Detail("Bode", 2, true);
+
+const array = [detailOne, detailTwo];
+array.push(detailThree);
+
+console.log(array);
+ 
+
+const createPerson = (name, age, isHands) => {
+    const userScheme = {name, age, isHands
+    }
+    return userScheme
+}
+
+const personCreated1 = createPerson("Bode", 45, true)
+const personCreated2 = createPerson("Soliu", 45, true)
+console.log(personCreated1);
+
+// INERITANCE 
+class Animal {
+    alive = true;
+
+    isbeautiful = 'This animal is beautiful';
+
+    eat() {
+        console.log(`This ${this.name} can eat`)
+    }
+
+    sleep() {
+        console.log(`This ${this.name} can sleep`)
+    }
+
+}
+
+class Rabbit extends Animal {
+    name = "Rabbit"
+
+    run() {
+        console.log(`This ${this.name} can run`)
+    }
+}
+
+const rabbit = new Rabbit()
+console.log(rabbit);
+rabbit.run();
+rabbit.eat();
+rabbit.sleep();
+
+class Goat extends Animal {
+    name = "goat";
+}
+
+const goat = new Goat();
+goat.eat()
+console.log(goat.isbeautiful);
+console.log(goat)
