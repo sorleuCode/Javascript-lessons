@@ -14,7 +14,7 @@
     cursor: pointer;
 }
 
-.choice-prefix  {
+.choice-prefix {
     padding: 1.5rem 2.5rem;
     background-color: #56a5eb;
     color: #ffffff;
@@ -27,7 +27,6 @@
 
 .correct {
     background-color: #28a745;
-
 }
 
 .inCorrect {
@@ -35,12 +34,10 @@
 }
 
 /* HUD */
-
 #hud {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
 
 .hud-prefix {
@@ -63,4 +60,24 @@
     height: 3.7rem;
     background-color: #56a5eb;
     width: 0%;
+}
+
+/* LOADER */
+
+#loader {
+    border: 1.6rem solid #ffffff;
+    border-top: 1.6rem solid #56a5eb;
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    } 
+    100% {
+        transform: rotate(360deg);
+    }
 }

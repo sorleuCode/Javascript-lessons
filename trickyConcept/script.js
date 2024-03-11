@@ -67,7 +67,7 @@ exampleThree();
 //     return 2 + 2
 // }
 
-const me = function (){}
+const me = function(){}
 
 const m = 2;
 console.log(g)
