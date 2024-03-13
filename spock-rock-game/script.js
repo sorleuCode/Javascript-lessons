@@ -13,7 +13,7 @@ const playerLizard = document.getElementById("playerLizard");
 const computerRock = document.getElementById("computerRock");
 const computerPaper = document.getElementById("computerPaper");
 const computerSpock = document.getElementById("computerSpock");
-const computerScisors = document.getElementById("computerScisors");
+const computerScissors = document.getElementById("computerScisors");
 const computerLizard = document.getElementById("computerLizard");
 
 const allGameIcons = document.querySelectorAll(".far");
